@@ -7,7 +7,7 @@ const Navbar = () => {
    <div id='navbar'>
     <Link href={"HomePage"}>Home</Link>
     <Link href={"CreatePostPage"}>CreatePostPage</Link>
-    <Link href={"SignupPage"}>Login</Link>
+    <Link href={"SignupPage"}>Signup</Link>
    </div>
    </>
   )

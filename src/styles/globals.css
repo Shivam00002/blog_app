@@ -135,7 +135,7 @@ height: auto;
 
 
 margin: auto;
-margin-top: 20px;
+margin-top: 60px;
 }
 
 .signup {
@@ -220,5 +220,19 @@ margin-top: 20px;
   width: 50%;
  
 }
+
+#p{
+color: black;
+margin-top: 10px;
+}
+
+
+
+.a{
+color: teal;
+cursor: pointer;
+  
+  }
+  
 
 
