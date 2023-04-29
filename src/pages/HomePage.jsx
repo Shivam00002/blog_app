@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
-
+import dynamic from "next/dynamic";
 
 
 const ItemperPage = 5 ;
@@ -114,7 +115,7 @@ const HomePage = ({ data  ,totalCount , currentPage , totalPages , dataPerPage})
               >    
            
                 <h4 id="title">Title : {el.title}</h4>
-                <img id="img" src={el.img} alt="" />
+                <img width={"320px"} height={"330px"} id="img" src={el.img} alt="" />
                 
                 <p>Discription :{el.discription}</p>
                 <hr />
@@ -140,4 +141,4 @@ const HomePage = ({ data  ,totalCount , currentPage , totalPages , dataPerPage})
   );
 };
 
-export default HomePage;
+export default dynamic(()=> Promise.resolve(HomePage),{ssr :true})
