@@ -6,11 +6,9 @@ const SignupPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState({});
 
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
+
+
 
   async function SignUp(e) {
     e.preventDefault();
@@ -20,20 +18,18 @@ const SignupPage = () => {
       email: email,
       password: password,
     };
-    setUser(obj);
-    setName("");
-    setEmail("");
-    setPassword("");
+  
+    console.log("start" , obj)
 
     await axios
       .post("https://post-app-ten.vercel.app/users", obj)
       .then((res) => {
         console.log(res);
-        alert("Signup Success");
+      //  alert("Signup Success");
       })
       .catch((err) => {
         console.log(err);
-        alert("Signup Failed");
+      //  alert("Signup Failed");
       });
   }
 

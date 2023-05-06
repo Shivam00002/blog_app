@@ -115,8 +115,8 @@ const HomePage = ({ data  ,totalCount , currentPage , totalPages , dataPerPage})
               >    
            
                 <h4 id="title">Title : {el.title}</h4>
-                <img width={"320px"} height={"330px"} id="img" src={el.img} alt="" />
-                
+            
+                <Image width="300" height="300" src={el.img}  alt={el.title}  />
                 <p>Discription :{el.discription}</p>
                 <hr />
               </div>
@@ -141,4 +141,7 @@ const HomePage = ({ data  ,totalCount , currentPage , totalPages , dataPerPage})
   );
 };
 
-export default dynamic(()=> Promise.resolve(HomePage),{ssr :true})
+export default dynamic(()=> Promise.resolve(HomePage),{ssr :false})
+
+
+
